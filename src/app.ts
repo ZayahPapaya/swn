@@ -1,6 +1,9 @@
 import express from 'express';
 const app = express();
 const port = 3000;
+import { Collection } from './models/collection';
+
+new Collection(app, 'model');
 
 app.get('/', (req, res) => {
   res.send('Hello World!');
